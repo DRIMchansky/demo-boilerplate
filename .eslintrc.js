@@ -11,9 +11,7 @@ module.exports = {
         process: 'readonly',
         __dirname: 'readonly'
     },
-    extends: [
-        'eslint:recommended'
-    ],
+    extends: ['eslint:recommended'],
     parserOptions: {
         ecmaVersion: 2019,
         sourceType: 'module'
@@ -25,13 +23,16 @@ module.exports = {
         'block-spacing': ['error', 'always'],
         'brace-style': ['error', '1tbs', { allowSingleLine: true }],
         camelcase: ['error'],
-        'comma-dangle': ['error', {
-            arrays: 'never',
-            objects: 'never',
-            imports: 'never',
-            exports: 'never',
-            functions: 'never'
-        }],
+        'comma-dangle': [
+            'error',
+            {
+                arrays: 'never',
+                objects: 'never',
+                imports: 'never',
+                exports: 'never',
+                functions: 'never'
+            }
+        ],
         'comma-spacing': ['error', { before: false, after: true }],
         'comma-style': ['error', 'last'],
         'computed-property-spacing': ['error', 'never'],
@@ -43,20 +44,24 @@ module.exports = {
         'func-call-spacing': ['error', 'never'],
         'generator-star-spacing': ['error', { before: true, after: true }],
         'handle-callback-err': ['error', '^(err|error)$'],
-        indent: ['error', 4, {
-            SwitchCase: 1,
-            VariableDeclarator: 1,
-            outerIIFEBody: 1,
-            MemberExpression: 1,
-            FunctionDeclaration: { parameters: 1, body: 1 },
-            FunctionExpression: { parameters: 1, body: 1 },
-            CallExpression: { arguments: 1 },
-            ArrayExpression: 1,
-            ObjectExpression: 1,
-            ImportDeclaration: 1,
-            flatTernaryExpressions: false,
-            ignoreComments: false
-        }],
+        indent: [
+            'error',
+            4,
+            {
+                SwitchCase: 1,
+                VariableDeclarator: 1,
+                outerIIFEBody: 1,
+                MemberExpression: 1,
+                FunctionDeclaration: { parameters: 1, body: 1 },
+                FunctionExpression: { parameters: 1, body: 1 },
+                CallExpression: { arguments: 1 },
+                ArrayExpression: 1,
+                ObjectExpression: 1,
+                ImportDeclaration: 1,
+                flatTernaryExpressions: false,
+                ignoreComments: false
+            }
+        ],
         'key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'keyword-spacing': ['error', { before: true, after: true }],
         'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
@@ -100,14 +105,17 @@ module.exports = {
         'no-misleading-character-class': 'error',
         'no-prototype-builtins': 'error',
         'no-useless-catch': 'error',
-        'no-mixed-operators': ['error', {
-            groups: [
-                ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-                ['&&', '||'],
-                ['in', 'instanceof']
-            ],
-            allowSamePrecedence: true
-        }],
+        'no-mixed-operators': [
+            'error',
+            {
+                groups: [
+                    ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+                    ['&&', '||'],
+                    ['in', 'instanceof']
+                ],
+                allowSamePrecedence: true
+            }
+        ],
         'no-mixed-spaces-and-tabs': 'error',
         'no-multi-spaces': 'error',
         'no-multi-str': 'error',
@@ -144,8 +152,23 @@ module.exports = {
         'no-unreachable': 'error',
         'no-unsafe-finally': 'error',
         'no-unsafe-negation': 'error',
-        'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true }],
-        'no-unused-vars': ['error', { vars: 'all', args: 'all', ignoreRestSiblings: true, argsIgnorePattern: '^_' }],
+        'no-unused-expressions': [
+            'error',
+            {
+                allowShortCircuit: true,
+                allowTernary: true,
+                allowTaggedTemplates: true
+            }
+        ],
+        'no-unused-vars': [
+            'error',
+            {
+                vars: 'all',
+                args: 'all',
+                ignoreRestSiblings: true,
+                argsIgnorePattern: '^_'
+            }
+        ],
         'no-use-before-define': ['error', { functions: false, classes: false, variables: false }],
         'no-useless-call': 'error',
         'no-useless-computed-key': 'error',
@@ -159,29 +182,42 @@ module.exports = {
         'object-curly-spacing': ['error', 'always'],
         'object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
         'one-var': ['error', { initialized: 'never' }],
-        'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
+        'operator-linebreak': [
+            'error',
+            'after',
+            { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }
+        ],
         'prefer-const': ['error', { destructuring: 'all' }],
         'prefer-promise-reject-errors': 'error',
         'quote-props': ['error', 'as-needed'],
         quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
-        'require-jsdoc': ['error', {
-            require: {
-                FunctionDeclaration: true,
-                MethodDefinition: true,
-                ClassDeclaration: true,
-                ArrowFunctionExpression: true,
-                FunctionExpression: true
+        'require-jsdoc': [
+            'error',
+            {
+                require: {
+                    FunctionDeclaration: true,
+                    MethodDefinition: true,
+                    ClassDeclaration: true,
+                    ArrowFunctionExpression: true,
+                    FunctionExpression: true
+                }
             }
-        }],
+        ],
         'rest-spread-spacing': ['error', 'never'],
         semi: ['error', 'never'],
         'semi-spacing': ['error', { before: false, after: true }],
-        'space-before-blocks': ['error', { functions: 'always', keywords: 'always', classes: 'always' }],
-        'space-before-function-paren': ['error', {
-            anonymous: 'never',
-            named: 'never',
-            asyncArrow: 'always'
-        }],
+        'space-before-blocks': [
+            'error',
+            { functions: 'always', keywords: 'always', classes: 'always' }
+        ],
+        'space-before-function-paren': [
+            'error',
+            {
+                anonymous: 'never',
+                named: 'never',
+                asyncArrow: 'always'
+            }
+        ],
         'space-in-parens': ['error', 'never'],
         'space-infix-ops': 'error',
         'space-unary-ops': ['error', { words: true, nonwords: true, overrides: { '-': false } }],
@@ -194,5 +230,5 @@ module.exports = {
         'wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
         'yield-star-spacing': ['error', 'both'],
         yoda: ['error', 'never']
-    },
-  }
+    }
+}
